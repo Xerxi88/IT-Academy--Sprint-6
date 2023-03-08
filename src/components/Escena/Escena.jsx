@@ -2,12 +2,17 @@ import React from 'react'
 
 const Escena = ({title}) => {
   return (
-    <div>{title}</div>
+    <>
+      <div>{title.frase1}</div>
+      <div>{title.frase2}</div>
+      <div>{title.frase3}</div>
+      <div>{title.frase4}</div>
+    </>
   )
 }
 
 Escena.defaultProps = {
-    title: "El nostre heroi estava surant per l'espai sideral quan a la llunyania va albirar una nau espacial",
+    title: "Insert text here",
   }
   
 export default Escena

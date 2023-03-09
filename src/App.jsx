@@ -1,26 +1,26 @@
-import Escena from './components/escena/Escena.jsx'
-import { useEffect, useState } from 'react';
-
+import Escena from "./components/escena/Escena.jsx";
+import { useEffect, useState } from "react";
 
 function App() {
-
-  const [text, setText] = useState([])
+  const [text, setText] = useState([]);
 
   useEffect(() => {
     const fetchStories = async () => {
-        const response = await fetch('stories.json');
-        const data = await response.json();
-        setText(data);
-    }
+      const response = await fetch("stories.json");
+      const data = await response.json();
+      setText(data);
+    };
 
     fetchStories();
   }, []);
- 
 
   return (
-    <div className="App">
-      <Escena title={text}/>
-    </div>
+    <>
+      <Escena title={text.frase1} />
+      <Escena title={text.frase2} />
+      <Escena title={text.frase3} />
+      <Escena title={text.frase4} />
+    </>
   );
 }
 

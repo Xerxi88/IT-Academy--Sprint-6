@@ -1,18 +1,16 @@
-import React from 'react'
+import React from "react";
+import {Border} from '../../styled.js';
 
-const Escena = ({title}) => {
+const Escena = ({ title }) => {
   return (
     <>
-      <div>{title.frase1}</div>
-      <div>{title.frase2}</div>
-      <div>{title.frase3}</div>
-      <div>{title.frase4}</div>
+      <Border>{title}</Border>
     </>
-  )
-}
+  );
+};
 
 Escena.defaultProps = {
-    title: "Insert text here",
-  }
-  
-export default Escena
+  title: "Insert text here",
+};
+
+export default Escena;

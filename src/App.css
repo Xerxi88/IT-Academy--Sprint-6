@@ -1,0 +1,41 @@
+.headerButton{
+    margin: 5px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+button{
+    width: 100%;
+    font-size: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    height: 100%;
+}
+.caja{
+    background-color: white;
+}
+.portada{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0b1c6a;
+    height: 100vh;
+}
+.boto{
+    width: 15%;
+    height: 5%;
+    margin: 50px;
+    padding: 5px;
+    border-radius: 15px;
+    border: 3px solid #d8d779;
+    color:#fff;
+    background-color: #0b1c6a;
+}
+.boto:hover{
+    border: 3px solid #fff;
+    color:#0b1c6a;
+    background-color: #d8d779;
+    transition: 0.2s;
+}

@@ -6,7 +6,7 @@ padding: 0.5em;
 border: 2px solid black;
 border-radius : 2em;
 text-align: center;
-cursor: pointer;
+cursor: default;
 `
 export const BotonBox = styled.div` 
 width: 100%;

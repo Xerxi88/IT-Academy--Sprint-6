@@ -1,11 +1,11 @@
 import React from "react";
 import {Border} from '../../styled.js';
 
-const Escena = ({ title, style, ref }) => {
+const Escena = ({title,style,onClick}) => {
   
   return (
     <>
-      <Border style={style}><div ref={ref}>{title}</div></Border>
+      <Border style={style}>{title}</Border>
     </>
   );
 };

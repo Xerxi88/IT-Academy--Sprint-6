@@ -1,26 +1,42 @@
 import Escena from "./components/escena/Escena.jsx";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import Boton from "./components/escena/Boton.jsx";
 import "./App.css";
+import stories from "./stories.json";
 
 function App() {
-  const [text, setText] = useState([]);
-
-  useEffect(() => {
-    const fetchStories = async () => {
-      const response = await fetch("stories.json");
-      const data = await response.json();
-      setText(data);
-    };
-
-    fetchStories();
-  }, []);
+  const [text, setText] = useState(stories);
+  const [contador, setContador] = useState(1);
 
   const anterior = () => {
-    alert("Click en anterior");
+    if (contador >= 0) {
+      setContador(contador - 1);
+      console.log(contador);
+      setText(
+        text.map((texto) => {
+          return contador === texto.id
+            ? { ...texto, color: "pink" }
+            : { ...texto, color: "white" };
+        })
+      );
+    } else {
+      setContador(0);
+    }
   };
   const seguent = () => {
-    alert("Click en següent");
+    if (contador < 4) {
+      setContador(contador + 1);
+      console.log(contador);
+      setText(
+        text.map((texto) => {
+          return contador === texto.id
+            ? { ...texto, color: "pink" }
+            : { ...texto, color: "white" };
+        })
+      );
+    } else {
+      setContador(3);
+    }
   };
 
   const [inici, setInici] = useState(true);
@@ -33,12 +49,12 @@ function App() {
     <>
       {inici && (
         <>
-            <div className="portada">
-              <h1 style={{color:"white"}}>Aventures intergalàctiques</h1>
-              <button className="boto" onClick={iniciar}>
-                Iniciar història
-              </button>
-            </div>
+          <div className="portada">
+            <h1 style={{ color: "white" }}>Aventures intergalàctiques</h1>
+            <button className="boto" onClick={iniciar}>
+              Iniciar història
+            </button>
+          </div>
         </>
       )}
       {!inici && (
@@ -47,10 +63,16 @@ function App() {
             <Boton text="Anterior" onClick={anterior} />
             <Boton text="Següent" onClick={seguent} />
           </div>
-          <Escena title={text.frase1} style={{ backgroundColor: "pink" }} />
-          <Escena title={text.frase2} />
-          <Escena title={text.frase3} />
-          <Escena title={text.frase4} />
+
+          {text.map((texto) => {
+            return (
+              <Escena
+                key={texto.id}
+                title={texto.frase}
+                style={{ backgroundColor: texto.color,backgroundImage: texto.fondo }}
+              />
+            );
+          })}
         </>
       )}
     </>

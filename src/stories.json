@@ -1,21 +1,26 @@
 [{
-  "id":0,
+  "id":1,
   "frase": "El nostre heroi estava surant per l'espai sideral quan a la llunyania va albirar una nau espacial",
   "fondo": "./image/1.jpg",
-  "color": "pink"
-},{
-  "id":1,
-  "frase": "Sentia curiositat per l'interior de la nau i es va posar a inspeccionar-la. Va arribar a una sala amb dues portes.",
-  "fondo": "./image/2.jpg",
-  "color": "white"
+  "color": "white",
+  "opacity": 0.8
+
 },{
   "id":2,
-  "frase": "L'heroi va decidir travessar la porta que el portava a casa",
-  "fondo": "./image/3.jpg",
-  "color": "white"
+  "frase": "Sentia curiositat per l'interior de la nau i es va posar a inspeccionar-la. Va arribar a una sala amb dues portes.",
+  "fondo": "image2",
+  "color": "white",
+  "opacity": 0.8
 },{
   "id":3,
+  "frase": "L'heroi va decidir travessar la porta que el portava a casa",
+  "fondo": "./image/3.jpg",
+  "color": "white",
+  "opacity": 0.8
+},{
+  "id":4,
   "frase": "Mentrestant, altres herois no van tenir tanta sort en la seva elecció …",
   "fondo": "./image/4.jpg",
-  "color": "white"
+  "color": "white",
+  "opacity": 0.8
 }]

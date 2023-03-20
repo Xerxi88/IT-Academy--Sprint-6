@@ -15,6 +15,9 @@ button{
 .caja{
     background-color: white;
 }
+.full{
+    height: 100vh;
+}
 .portada{
     display: flex;
     flex-direction: column;

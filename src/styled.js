@@ -20,5 +20,10 @@ user-select: none;
 background-color: lightgray;
 `
 
+export const Fondo = styled.div`
+background-size: cover;
+background-position: center;
+`
+
 
     
